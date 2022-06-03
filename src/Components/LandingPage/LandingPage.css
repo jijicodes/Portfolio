@@ -22,7 +22,6 @@
 .greetingMsg {
    font-family: 'Open Sans', sans-serif;
    flex-direction: column;
-   color: #fbe5d8;
    align-items: center;
    text-align: center;    
   }
