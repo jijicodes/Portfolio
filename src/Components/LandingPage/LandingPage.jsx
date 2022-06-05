@@ -9,8 +9,8 @@ import {
   ResponsiveContext,
   Paragraph,
   Anchor,
-  Nav,
 } from "grommet";
+import { Nav } from "../Nav/Nav";
 
 export const LandingPage = () => {
   const size = React.useContext(ResponsiveContext);
@@ -26,24 +26,7 @@ export const LandingPage = () => {
           align="center"
           fill
         >
-          <Box>
-            <Nav direction="row" pad="medium">
-              <Anchor href="me" label="me" hoverIndicator color="#524127" />
-              <Anchor
-                href="portfolio"
-                label="portfolio"
-                hoverIndicator
-                color="#524127"
-              />
-              <Anchor
-                href="resume"
-                label="resume"
-                hoverIndicator
-                color="#524127"
-              />
-            </Nav>
-          </Box>
-
+          <Nav />
           <Box pad="small" gap="small">
             <Text className="typeWriter" size="45px">
               Hello, I'm Jieun Seo.
