@@ -38,10 +38,6 @@ export const Me = () => {
               <Text>sjieun1@gmail.com</Text>
               <Copy size="small" />
             </Box>
-            <Box direction="row" gap="small">
-              <Phone />
-              <Text>702-410-3248</Text>
-            </Box>
           </Box>
         </Box>
       </Box>

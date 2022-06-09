@@ -7,6 +7,7 @@ import { LandingPage } from "../LandingPage/LandingPage";
 import { Me } from "../Me/Me";
 import { Portfolio } from "../Portfolio/Portfolio";
 import { HeaderNav } from "../HeaderNav/HeaderNav";
+import { Resume } from "../Resume/Resume";
 
 export const Pages = () => {
   return (
@@ -16,9 +17,9 @@ export const Pages = () => {
         <Box fill align="center">
           <Routes>
             <Route path="/" element={<LandingPage />}></Route>
-            <Route path="/home" element={<LandingPage />}></Route>
             <Route path="me" element={<Me />}></Route>
             <Route path="portfolio" element={<Portfolio />}></Route>
+            <Route path="resume" element={<Resume />}></Route>
           </Routes>
         </Box>
       </Box>

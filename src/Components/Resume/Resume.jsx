@@ -4,7 +4,7 @@ import { saveAs } from "file-saver";
 
 export const Resume = () => {
   const saveFile = () => {
-    saveAs(`${process.env.PUBLIC_URL}/Images/resume1.png`, "Jieun-CV.png");
+    saveAs(`${process.env.PUBLIC_URL}/Images/download.png`, "JS_CV.png");
   };
   return (
     <Box direction="column" gap="medium">
@@ -20,7 +20,7 @@ export const Resume = () => {
       </Box>
 
       <Box width="70vw" height="90vh">
-        <Image src={`${process.env.PUBLIC_URL}/Images/resume1.png`} />
+        <Image src={`${process.env.PUBLIC_URL}/Images/resumePrint.png`} />
       </Box>
     </Box>
   );
