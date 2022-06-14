@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Heading, Text, Image, Pagination } from "grommet";
+import { Box, Text } from "grommet";
 import { PortfolioList } from "../PortfolioList/PortfolioList";
 
 export const Portfolio = () => {

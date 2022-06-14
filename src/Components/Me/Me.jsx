@@ -1,9 +1,11 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import "./Me.css";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Box, Paragraph, Image, Text } from "grommet";
+import { Mail } from "grommet-icons";
+import copy from "copy-to-clipboard";
+import { Box, Button, Paragraph, Image, Text, Anchor } from "grommet";
 
 export const Me = () => {
+  const [copied, setCopied] = useState("copy");
   return (
     <Box
       background="#FBFBDE"
@@ -32,7 +34,6 @@ export const Me = () => {
               getting a little bit better and studying a little bit more 👩‍💻{" "}
             </Text>
           </Paragraph>
-
           <Paragraph>
             <Text weight="bold">
               I have experience creating apps mainly using JavaScript and React
@@ -40,7 +41,6 @@ export const Me = () => {
               differnet things building UIs, routing, and APIs ⚛️
             </Text>
           </Paragraph>
-
           <Paragraph>
             <Text color="#d04764" size="large" weight="bolder">
               ✨Fun Fact About Me✨
@@ -53,7 +53,28 @@ export const Me = () => {
               💻 📱
               <br /> Also, I speak English 🇺🇸 - Korean 🇰🇷 - and Japanese 🇯🇵
             </Text>
-          </Paragraph>
+          </Paragraph>{" "}
+          <Box direction="column" align="center">
+            <Box direction="row" align="center" gap="small">
+              <Mail />
+              <Text>sjieun11@gmail.com</Text>
+              <Button
+                primary
+                color="#524127"
+                size="small"
+                label={copied}
+                onClick={() => {
+                  setCopied(() => "copied!");
+                  copy("sjieun11@gmail.com");
+                }}
+              />
+            </Box>
+            <Box>
+              <Anchor color="#524127" href="mailto:sjieun11@gmail.com">
+                Send email
+              </Anchor>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>

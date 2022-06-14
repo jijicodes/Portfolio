@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Text, Button, Image } from "grommet";
 import { Reactjs, Js, Grommet } from "grommet-icons";
+import { Box, Image, Text, Button } from "grommet";
 
 export const PortfolioList = ({
   title,
