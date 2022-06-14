@@ -1,6 +1,5 @@
 import React from "react";
-import { Box } from "grommet";
-import { Down } from "grommet-icons";
+import { Box, Text, Anchor } from "grommet";
 import "./Pages.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LandingPage } from "../LandingPage/LandingPage";
@@ -21,6 +20,19 @@ export const Pages = () => {
             <Route path="portfolio" element={<Portfolio />}></Route>
             <Route path="resume" element={<Resume />}></Route>
           </Routes>
+        </Box>
+        <Box align="center" pad="small">
+          {" "}
+          <Text>
+            2022 | Designed & Coded with ❤️ by{" "}
+            <Anchor
+              href="https://github.com/jijicodes"
+              target="_blank"
+              label="Jieun"
+              color="black"
+            />{" "}
+            (aka Jenna)
+          </Text>
         </Box>
       </Box>
     </Box>

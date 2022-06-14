@@ -1,9 +1,8 @@
 import "./App.css";
-import { Grommet, grommet } from "grommet";
+import { Anchor, Grommet, Text } from "grommet";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Pages } from "../src/Components/Pages/Pages";
-import { hpe } from "grommet-theme-hpe";
 
 function App() {
   const customTheme = {

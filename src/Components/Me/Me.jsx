@@ -7,13 +7,7 @@ import { Box, Button, Paragraph, Image, Text, Anchor } from "grommet";
 export const Me = () => {
   const [copied, setCopied] = useState("copy");
   return (
-    <Box
-      background="#FBFBDE"
-      className="meBody"
-      justify="start"
-      gap="large"
-      fill
-    >
+    <Box background="#FBFBDE" justify="start" gap="large">
       <Box pad={{ top: "large" }} className="title" align="center">
         About Me
       </Box>
