@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Button, Image } from "grommet";
+import { Mail, Map, Copy, Phone } from "grommet-icons";
+import { Box, Button, Image, Text } from "grommet";
 import { saveAs } from "file-saver";
 
 export const Resume = () => {
@@ -21,6 +22,18 @@ export const Resume = () => {
 
       <Box width="70vw" height="90vh">
         <Image src={`${process.env.PUBLIC_URL}/Images/resumePrint.png`} />
+      </Box>
+      <Box pad="small">
+        <Box className="title">Contact Detail</Box>
+        <Box direction="row" gap="small">
+          <Map />
+          <Text>Denver</Text>
+        </Box>
+        <Box direction="row" gap="small">
+          <Mail />
+          <Text>sjieun1@gmail.com</Text>
+          <Copy size="small" />
+        </Box>
       </Box>
     </Box>
   );

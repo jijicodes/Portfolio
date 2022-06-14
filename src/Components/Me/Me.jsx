@@ -1,44 +1,59 @@
 import React, { useContext } from "react";
-import { Mail, Map, Copy, Phone } from "grommet-icons";
 import "./Me.css";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Box, Paragraph, Text, Image } from "grommet";
+import { Box, Paragraph, Image, Text } from "grommet";
 
 export const Me = () => {
   return (
-    <Box className="meBody" justify="start" fill>
-      <Box pad="medium" className="title" align="center">
+    <Box
+      background="#FBFBDE"
+      className="meBody"
+      justify="start"
+      gap="large"
+      fill
+    >
+      <Box pad={{ top: "large" }} className="title" align="center">
         About Me
       </Box>
-      <Box direction="row" gap="small" justify="center">
-        <Box width="25%">
+      <Box direction="row" gap="large" justify="center">
+        <Box width="30%" height="50%">
           <Image
             fit="cover"
             src={`${process.env.PUBLIC_URL}/Images/seoul.jpg`}
           />
+          <Text alignSelf="center"> ⬆️ Picture of Seoul, South Korea</Text>
         </Box>
-        <Box width="25%" direction="column">
-          <Text>
-            Hi, I am Jieun Seo. <br></br>I used to teach little kids in
-            pre-school.<br></br> Now I am on my journey of becoming a better
-            programmer everyday as a self-taught React Developer. <br></br>I
-            have been working on
-            mostfjslfjklasdjfklasdjfklajfkljlkasfjsflkajlfkjsdlkfj
-            sdjflasjfksldajfjlskdjflskjflkas jflksjflksj I speak English 🇺🇸 -
-            Korean 🇰🇷 - and Japanese 🇯🇵 I love building frontend apps
-          </Text>
-          <Box pad="small">
-            <Box className="title">Contact Detail</Box>
-            <Box direction="row" gap="small">
-              <Map />
-              <Text>Denver</Text>
-            </Box>
-            <Box direction="row" gap="small">
-              <Mail />
-              <Text>sjieun1@gmail.com</Text>
-              <Copy size="small" />
-            </Box>
-          </Box>
+        <Box width="35%" direction="column">
+          <Paragraph margin="none">
+            <Text weight="bold">
+              Hi👋 my name is <b>Jieun Seo</b> (aka Jenna). <br />I used to
+              teach kids in pre-school 🍎👩‍🏫
+              <br /> Now I am currently 2 years into my coding journey everyday
+              getting a little bit better and studying a little bit more 👩‍💻{" "}
+            </Text>
+          </Paragraph>
+
+          <Paragraph>
+            <Text weight="bold">
+              I have experience creating apps mainly using JavaScript and React
+              but also TypeScript and using a bunch of different libraries for
+              differnet things building UIs, routing, and APIs ⚛️
+            </Text>
+          </Paragraph>
+
+          <Paragraph>
+            <Text color="#d04764" size="large" weight="bolder">
+              ✨Fun Fact About Me✨
+            </Text>
+            <Text weight="bold">
+              <br />I moved to the US 🇺🇸 at the age of 16 without knowing any
+              English and eventually got a bachelors degree from UNLV in 2019
+              👩🏻‍🎓. <br />
+              Then I started studying programming, now I build React apps daily
+              💻 📱
+              <br /> Also, I speak English 🇺🇸 - Korean 🇰🇷 - and Japanese 🇯🇵
+            </Text>
+          </Paragraph>
         </Box>
       </Box>
     </Box>

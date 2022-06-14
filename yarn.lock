@@ -4713,6 +4713,11 @@ grommet-styles@^0.2.0:
   resolved "https://registry.yarnpkg.com/grommet-styles/-/grommet-styles-0.2.0.tgz#b2eac2b7e2747cb523434d21728ce5234f8ce4f4"
   integrity sha512-0OMSYuGeyifYKpg4Gv2HzL8rUdd0ddnJ5LbCBKgDuloC71XIwr9g/Fxa6rs737MbPV7OZ4pEm4wvrjH4epzf1A==
 
+grommet-theme-hpe@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/grommet-theme-hpe/-/grommet-theme-hpe-3.1.0.tgz#845fc698256b65ff5b638d98ebdece9e2c921456"
+  integrity sha512-YTBHKHzQqiesLx+ENkKyV21nWIjP0xow2UJBT+3h1Nk8ISl1iL7zDIT/8bDw1prSEWcv6klaNGG5kwc4ULk6Nw==
+
 grommet@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/grommet/-/grommet-2.24.0.tgz#402c198ddf25f1b898cfcb866b690472c3145a5f"

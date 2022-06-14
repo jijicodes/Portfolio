@@ -10,6 +10,7 @@
     "file-saver": "^2.0.5",
     "gh-pages": "^4.0.0",
     "grommet": "^2.24.0",
+    "grommet-theme-hpe": "^3.1.0",
     "react": "^18.1.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.1.0",
