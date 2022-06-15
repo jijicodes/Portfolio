@@ -12,7 +12,7 @@ export const Pages = () => {
   return (
     <Box>
       <HeaderNav />
-      <Box fill align="center">
+      <Box fill align="center" height={{ min: /*isSmall ? "80vh" :*/ "90vh" }}>
         <Routes>
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="me" element={<Me />}></Route>
@@ -20,16 +20,15 @@ export const Pages = () => {
           <Route path="resume" element={<Resume />}></Route>
         </Routes>
       </Box>
-      <Box align="center" pad="small">
-        {" "}
+      <Box height="5vh" align="center" pad="small">
         <Text>
-          2022 | Designed & Coded with ❤️ by{" "}
+          2022 | Designed & Coded with ❤️ by
           <Anchor
             href="https://github.com/jijicodes"
             target="_blank"
             label="Jieun"
             color="black"
-          />{" "}
+          />
           (aka Jenna)
         </Text>
       </Box>

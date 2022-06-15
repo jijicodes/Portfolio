@@ -13,7 +13,7 @@ export const LandingPage = () => {
         align="center"
         justify="center"
         gap="medium"
-        height="100vh"
+        height="90vh"
       >
         <Text className="typeWriter" size="45px">
           Hello, I'm Jieun Seo.
