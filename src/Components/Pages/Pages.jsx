@@ -14,7 +14,12 @@ export const Pages = () => {
   return (
     <Box>
       <HeaderNav />
-      <Box fill align="center" height={{ min: isSmall ? "80vh" : "90vh" }}>
+      <Box
+        fill
+        align="center"
+        height={{ min: isSmall ? "80vh" : "90vh" }}
+        pad={isSmall ? "none" : "medium"}
+      >
         <Routes>
           <Route path="/" element={<LandingPage />}></Route>
           <Route path="me" element={<Me />}></Route>

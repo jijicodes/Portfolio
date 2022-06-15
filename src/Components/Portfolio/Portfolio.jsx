@@ -5,7 +5,7 @@ import { PortfolioList } from "../PortfolioList/PortfolioList";
 export const Portfolio = () => {
   return (
     <Box background="#FBFBDE" width="80vw">
-      <Box align="center" pad="medium" gap="large">
+      <Box align="center" pad="small" gap="large">
         <Box pad="medium">
           <Text weight="bold" size="xlarge" className="title">
             The Apps that I've built

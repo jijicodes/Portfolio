@@ -17,17 +17,18 @@ export const PortfolioList = ({
   const isSmall = size === "small";
 
   return (
-    <Box direction="column" gap="large" align="center">
+    <Box direction="column" gap="large">
       <Box direction={isSmall ? "column" : "row"} gap="medium">
-        <Box
-          direction="column"
-          gap="medium"
-          width={isSmall ? undefined : "45vw"}
-        >
-          <Text direction="row" size="30px" color="#FF9A76" weight="bold">
+        <Box direction="column" gap="medium" width={isSmall ? "80vw" : "45vw"}>
+          <Text
+            direction="row"
+            size={isSmall ? "26px" : "30px"}
+            color="#FF9A76"
+            weight="bold"
+          >
             {title}
           </Text>
-          <Text size="25px" color="#637373">
+          <Text size={isSmall ? "22px" : "25px"} color="#637373">
             {detail}
           </Text>
         </Box>
@@ -36,7 +37,8 @@ export const PortfolioList = ({
           direction="column"
           gap="small"
           margin="none"
-          width={{ max: isSmall ? undefined : "33.3%" }}
+          alignSelf={isSmall ? "center" : "undefined"}
+          width={{ max: isSmall ? "60vw" : "33.3%" }}
         >
           <Image
             width="100%"
@@ -47,6 +49,7 @@ export const PortfolioList = ({
           />
           <Box direction="row" justify="center" gap="small">
             <Button
+              size={isSmall ? "small" : "medium"}
               alignSelf="center"
               color="#524127"
               primary
@@ -56,6 +59,7 @@ export const PortfolioList = ({
               hoverIndicator
             />
             <Button
+              size={isSmall ? "small" : "medium"}
               alignSelf="center"
               color="#524127"
               primary
@@ -71,18 +75,26 @@ export const PortfolioList = ({
       <Box
         direction={isSmall ? "column-reverse" : "row"}
         gap="large"
-        align="center"
+        alignContent="stretch"
       >
         <Box
-          width={{ max: isSmall ? undefined : "33.3%" }}
+          width={{ max: isSmall ? "60vw" : "33.3%" }}
           direction="column"
           gap="small"
+          alignSelf={isSmall ? "center" : "undefined"}
         >
           <Box>
-            <Image width="100%" fit="cover" src={image2} alignSelf="center" />
+            <Image
+              width="100%"
+              fit="contain"
+              src={image2}
+              alignSelf="center"
+              margin="none"
+            />
           </Box>
           <Box direction="row" justify="center" gap="small">
             <Button
+              size={isSmall ? "small" : "medium"}
               alignSelf="center"
               color="#524127"
               primary
@@ -92,6 +104,7 @@ export const PortfolioList = ({
               hoverIndicator
             />
             <Button
+              size={isSmall ? "small" : "medium"}
               alignSelf="center"
               color="#524127"
               primary
@@ -102,11 +115,16 @@ export const PortfolioList = ({
             />
           </Box>
         </Box>
-        <Box gap="medium" direction="column" width="45vw" justify="start">
-          <Text size="30px" color="#FF9A76" weight="bold">
+        <Box
+          gap="medium"
+          direction="column"
+          width={isSmall ? "80vw" : "45vw"}
+          justify="start"
+        >
+          <Text size={isSmall ? "26px" : "30px"} color="#FF9A76" weight="bold">
             {title2}
           </Text>
-          <Text size="25px" color="#637373">
+          <Text size={isSmall ? "22px" : "25px"} color="#637373">
             {detail2}
           </Text>
         </Box>
