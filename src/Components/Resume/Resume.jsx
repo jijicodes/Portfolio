@@ -7,7 +7,7 @@ export const Resume = () => {
     saveAs(`${process.env.PUBLIC_URL}/Images/download.png`, "JS_CV.png");
   };
   return (
-    <Box direction="column" gap="medium">
+    <Box direction="column" gap="medium" width="60vw">
       <Box align="end">
         {" "}
         <Button
@@ -18,10 +18,7 @@ export const Resume = () => {
           onClick={saveFile}
         />
       </Box>
-
-      <Box width="60vw" height="80vh">
-        <Image src={`${process.env.PUBLIC_URL}/Images/resumePrint.png`} />
-      </Box>
+      <Image src={`${process.env.PUBLIC_URL}/Images/resumePrint.png`} />
     </Box>
   );
 };

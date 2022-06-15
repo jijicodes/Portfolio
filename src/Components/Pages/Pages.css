@@ -1,20 +1,17 @@
-.pagesBackground{
-    height: 100vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
- background-image: -webkit-image-set(url("/public/Images/background-small.jpg") 1x, url("/public/Images/background-large.jpg") 2x);
-    background-image: image-set("/public/Images/background-small.jpg" 1x, "/public/Images/background-large.jpg" 2x); 
+body::before{
+  content: '';
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  background-size: cover;   
+  background-image: -webkit-image-set(url("/public/Images/background-small.jpg") 1x, url("/public/Images/background-large.jpg") 2x);
+  opacity: 0.5;
+  background-image: image-set("/public/Images/background-small.jpg" 1x, "/public/Images/background-large.jpg" 2x); 
 
-/* 
-    background-image: 
-    -webkit-image-set(
-    url("/public/Images/background-small.jpg") 1x,
-    url("/public/Images/background-large.jpg") 2x);
-    background-image:  image-set(    
-      url("/public/Images/background-small.jpg") 1x
-      url("/public/Images/background-large.jpg") 2x); */
+
 }
 
 .down {

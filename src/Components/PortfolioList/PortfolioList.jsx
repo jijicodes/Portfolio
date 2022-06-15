@@ -1,6 +1,5 @@
-import React from "react";
-import { Reactjs, Js, Grommet } from "grommet-icons";
-import { Box, Image, Text, Button } from "grommet";
+import React, { useContext } from "react";
+import { Box, Image, Text, Button, ResponsiveContext } from "grommet";
 
 export const PortfolioList = ({
   title,
@@ -14,28 +13,38 @@ export const PortfolioList = ({
   githubRepo2,
   website2,
 }) => {
+  const size = useContext(ResponsiveContext);
+  const isSmall = size === "small";
+
   return (
-    <Box direction="column" gap="large">
-      <Box direction="row" gap="large">
-        <Box direction="column" gap="medium" width="45vw">
-          <Text direction="row" size="30px" color="#FF9A76">
+    <Box direction="column" gap="large" align="center">
+      <Box direction={isSmall ? "column" : "row"} gap="medium">
+        <Box
+          direction="column"
+          gap="medium"
+          width={isSmall ? undefined : "45vw"}
+        >
+          <Text direction="row" size="30px" color="#FF9A76" weight="bold">
             {title}
           </Text>
           <Text size="25px" color="#637373">
             {detail}
           </Text>
-          <Box direction="row" gap="small">
-            <Js color="white" />
-            <Reactjs color="aqua" />
-            <Grommet color="purple" />
-          </Box>
         </Box>
 
-        <Box direction="column" gap="medium">
-          <Box width="34vw" height="34vw" align="center">
-            <Image fit="contain" src={image} alignSelf="center" />
-          </Box>
-
+        <Box
+          direction="column"
+          gap="small"
+          margin="none"
+          width={{ max: isSmall ? undefined : "33.3%" }}
+        >
+          <Image
+            width="100%"
+            fit="contain"
+            src={image}
+            alignSelf="center"
+            margin="none"
+          />
           <Box direction="row" justify="center" gap="small">
             <Button
               alignSelf="center"
@@ -59,12 +68,19 @@ export const PortfolioList = ({
         </Box>
       </Box>
 
-      <Box direction="row" gap="large">
-        <Box direction="column" gap="medium">
-          <Box width="30vw" height="30vw">
-            <Image fit="contain" src={image2} alignSelf="center" />
+      <Box
+        direction={isSmall ? "column-reverse" : "row"}
+        gap="large"
+        align="center"
+      >
+        <Box
+          width={{ max: isSmall ? undefined : "33.3%" }}
+          direction="column"
+          gap="small"
+        >
+          <Box>
+            <Image width="100%" fit="cover" src={image2} alignSelf="center" />
           </Box>
-
           <Box direction="row" justify="center" gap="small">
             <Button
               alignSelf="center"
@@ -86,18 +102,13 @@ export const PortfolioList = ({
             />
           </Box>
         </Box>
-        <Box gap="medium" direction="column" width="45vw">
-          <Text alignSelf="end" size="30px" color="#FF9A76">
+        <Box gap="medium" direction="column" width="45vw" justify="start">
+          <Text size="30px" color="#FF9A76" weight="bold">
             {title2}
           </Text>
           <Text size="25px" color="#637373">
             {detail2}
           </Text>
-          <Box direction="row" gap="small">
-            <Js color="white" />
-            <Reactjs color="aqua" />
-            <Grommet color="purple" />
-          </Box>
         </Box>
       </Box>
     </Box>
