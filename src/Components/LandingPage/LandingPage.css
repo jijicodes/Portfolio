@@ -27,3 +27,12 @@
     50% { border-color: rgb(231, 242, 189); }
   }
 
+.small {
+  color: #524127;
+  font-weight: bold;
+  font-family: monospace;   
+  letter-spacing: .15em;
+  overflow: hidden; 
+  white-space: nowrap;
+  
+}
