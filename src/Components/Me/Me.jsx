@@ -12,13 +12,21 @@ export const Me = () => {
         <Box pad={{ top: "large" }} className="title" align="center">
           About Me
         </Box>
-        <Box direction="row" gap="large" justify="center" margin="none">
+        <Box
+          direction="row"
+          pad="small"
+          gap="large"
+          justify="center"
+          margin="none"
+        >
           <Box width="30%" height="50%">
             <Image
               fit="cover"
               src={`${process.env.PUBLIC_URL}/Images/seoul.jpg`}
             />
-            <Text alignSelf="center"> ⬆️ Picture of Seoul, South Korea</Text>
+            <Text size="xsmall" alignSelf="center" truncate>
+              ⬆️ Picture of Seoul, South Korea
+            </Text>
           </Box>
           <Box direction="column">
             <Paragraph margin="none">
@@ -34,7 +42,7 @@ export const Me = () => {
               <Text weight="bold">
                 I have experience creating apps mainly using JavaScript and
                 React but also TypeScript and using a bunch of different
-                libraries for differnet things building UIs, routing, and APIs
+                libraries for different things building UIs, routing, and APIs
                 ⚛️
               </Text>
             </Paragraph>
@@ -54,7 +62,9 @@ export const Me = () => {
             <Box direction="column" align="center">
               <Box direction="row" align="center" gap="small">
                 <Mail />
-                <Text>sjieun11@gmail.com</Text>
+                <Anchor color="#524127" href="mailto:sjieun11@gmail.com">
+                  sjieun11@gmail.com
+                </Anchor>
                 <Button
                   primary
                   color="#524127"
@@ -65,11 +75,6 @@ export const Me = () => {
                     copy("sjieun11@gmail.com");
                   }}
                 />
-              </Box>
-              <Box>
-                <Anchor color="#524127" href="mailto:sjieun11@gmail.com">
-                  Send email
-                </Anchor>
               </Box>
             </Box>
           </Box>
