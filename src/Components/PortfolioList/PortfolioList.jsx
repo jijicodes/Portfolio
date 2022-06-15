@@ -37,7 +37,7 @@ export const PortfolioList = ({
           direction="column"
           gap="small"
           margin="none"
-          alignSelf={isSmall ? "center" : "undefined"}
+          alignSelf="center"
           width={{ max: isSmall ? "60vw" : "33.3%" }}
         >
           <Image
@@ -81,7 +81,7 @@ export const PortfolioList = ({
           width={{ max: isSmall ? "60vw" : "33.3%" }}
           direction="column"
           gap="small"
-          alignSelf={isSmall ? "center" : "undefined"}
+          alignSelf="center"
         >
           <Box>
             <Image
