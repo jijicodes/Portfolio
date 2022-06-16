@@ -1,8 +1,11 @@
-import React from "react";
-import { Box, Text } from "grommet";
+import React, { useContext } from "react";
+import { Anchor, Box, Text, ResponsiveContext } from "grommet";
 import { PortfolioList } from "../PortfolioList/PortfolioList";
+import { Footer } from "../Footer/Footer";
 
 export const Portfolio = () => {
+  const size = useContext(ResponsiveContext);
+  const isSmall = size === "small";
   return (
     <Box background="#FBFBDE" width="80vw">
       <Box align="center" pad="small" gap="large">
@@ -40,6 +43,7 @@ export const Portfolio = () => {
           website2="https://jijicodes.github.io/MatchingGame/"
         />
       </Box>
+      <Footer />
     </Box>
   );
 };

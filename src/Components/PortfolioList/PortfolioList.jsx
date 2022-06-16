@@ -17,9 +17,14 @@ export const PortfolioList = ({
   const isSmall = size === "small";
 
   return (
-    <Box direction="column" gap="large">
+    <Box className="portfolioList" direction="column" gap="large">
       <Box direction={isSmall ? "column" : "row"} gap="medium">
-        <Box direction="column" gap="medium" width={isSmall ? "80vw" : "45vw"}>
+        <Box
+          // flex={{ grow: 1 }}
+          direction="column"
+          gap="medium"
+          width={isSmall ? "80vw" : "45vw"}
+        >
           <Text
             direction="row"
             size={isSmall ? "26px" : "30px"}

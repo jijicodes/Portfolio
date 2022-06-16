@@ -8,14 +8,14 @@ export const LandingPage = () => {
   const isSmall = size === "small";
 
   return (
-    <Box>
+    <Box fill>
       <Box
         className="greetingMsg"
         direction="column"
         align="center"
         justify="center"
         gap="medium"
-        height={isSmall ? "80vh" : "90vh"}
+        fill
       >
         {isSmall ? (
           <Text className="small" size="25px" textAlign="center">
@@ -66,6 +66,22 @@ export const LandingPage = () => {
             <Linkedin color="#423c22" size="27px" />
           </Anchor>
         </Box>
+      </Box>
+      <Box
+        // height={isSmall ? "10vh" : "3rem"}
+        align="center"
+        // pad={isSmall ? "large" : undefined}
+      >
+        <Text size={isSmall ? "xsmall" : "medium"}>
+          2022 | Designed &amp; Coded with ❤️ by
+          <Anchor
+            href="https://github.com/jijicodes"
+            target="_blank"
+            label="Jieun"
+            color="black"
+          />
+          (aka Jenna)
+        </Text>
       </Box>
     </Box>
   );

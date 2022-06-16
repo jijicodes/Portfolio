@@ -17,7 +17,7 @@ function App() {
     },
   };
   return (
-    <Grommet theme={customTheme}>
+    <Grommet theme={customTheme} full>
       <BrowserRouter>
         <Pages />
       </BrowserRouter>

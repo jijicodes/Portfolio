@@ -8,7 +8,7 @@ export const HeaderNav = () => {
   const size = useContext(ResponsiveContext);
   const isSmall = size === "small";
   return isSmall ? (
-    <Box height="10vh">
+    <Box height="10vh" pad={{ bottom: "5vh" }}>
       <Menu
         icon={<MenuIcon />}
         alignSelf="end"
@@ -29,7 +29,7 @@ export const HeaderNav = () => {
       />
     </Box>
   ) : (
-    <Nav height="5vh" direction="row" pad="medium" justify="center">
+    <Nav height="5rem" direction="row" align="center" justify="center">
       <Anchor as={Link} color="#524127" href="#" to="/" label="home" />
       <Anchor as={Link} color="#524127" href="#" to="/me" label="me" />
       <Anchor
