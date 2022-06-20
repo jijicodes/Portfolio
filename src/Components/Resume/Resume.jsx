@@ -7,7 +7,7 @@ export const Resume = () => {
   const isSmall = size === "small";
 
   const saveFile = () => {
-    saveAs(`${process.env.PUBLIC_URL}/Images/download.png`, "JS_CV.png");
+    saveAs(`${process.env.PUBLIC_URL}/Images/CV.png`, "JS_CV.png");
   };
   return (
     <Box direction="column" gap="large" width={isSmall ? "90vw" : "60vw"}>
@@ -21,7 +21,7 @@ export const Resume = () => {
           onClick={saveFile}
         />
       </Box>
-      <Image src={`${process.env.PUBLIC_URL}/Images/resumePrint.png`} />
+      <Image src={`${process.env.PUBLIC_URL}/Images/portfolio.png`} />
       <Box
         // height={isSmall ? "10vh" : "3rem"}
         align="center"
